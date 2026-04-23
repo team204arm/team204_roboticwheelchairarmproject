@@ -1,7 +1,8 @@
 // ==================================================
-// Last updated: 3/30/2026
+// Last updated: 4/23/2026
 // - Wrist and gripper functionality
 // - Button swap between modes and fixed custom funcs 
+// - Buttons properly Debounced
 // ==================================================
 
 #include <ArduinoJson.h>
