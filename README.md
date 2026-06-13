@@ -1,6 +1,6 @@
 # Installation Instructions
 Note: An external device such as a laptop is required to transfer code to RoArm-M2-S
-1.	Navigate to https://github.com/anjali-vishwakarma-vt/PPMD-VT-Senior-Design on an external device.  
+1.	Navigate to [https://github.com/anjali-vishwakarma-vt/PPMD-VT-Senior-Design](https://github.com/team204arm/team204_roboticwheelchairarmproject) on an external device.  
   a.	Download RoArm-M2_With_Gripper.zip  
 2.	Download the latest version of Arduino IDE from the Arduino website and follow the installation prompts. During installation, allow any driver installations if prompted. 
 3.	Navigate to https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads and download the driver compatible with your system (recommended driver for Windows: CP210x Windows Drivers)
