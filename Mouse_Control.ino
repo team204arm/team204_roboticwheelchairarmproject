@@ -125,8 +125,8 @@ int home_z = 60;
 const float WRIST_OUT = 3.9; // flat wrist value
 const float rotate_min = 2.6; // minimum wrist value
 const float rotate_max = 5.0; // maximum wrist value
-const float Gripper_open = 2400; // gripper's widest opening
-const float Gripper_closed = 3130; // grippers  tightest closing
+const float Gripper_open = 2200; // gripper's widest opening
+const float Gripper_closed = 3230; // grippers  tightest closing
 
 // ==================================================
 // ================= MENU VARIABLES =================
@@ -205,11 +205,11 @@ void setup() {
   curypos = 0;
   curzpos = 150;
   curtpos = 3.24;
-  curgpos = 2700; //Fully open
+  curgpos = 2700;
 
   // Initialize flash storage
   prefs.begin("customFns", false);  // namespace, read/write
-  loadCustomFunctions();
+  //loadCustomFunctions();
 
   drawArmManualScreen();
 }
@@ -797,7 +797,7 @@ void elevator_setup() {
 // ==== Recording Function =
 // =========================
 
-void RecordFunction() {
+/*void RecordFunction() {
   // maxSavedPoints = pointsPerFunction[currentFunction];
 
   if (currentFunction < 0) return;
@@ -1289,7 +1289,7 @@ void renameCustomFunction() {
 
   saveCustomNames();
   updateMenuNames();
-}
+}*/
 
 // ==================================================
 // ================= MOUSE ==========================
@@ -1401,7 +1401,15 @@ void mouse_control(int8_t dx, int8_t dy, int8_t scroll, uint8_t buttons) {
       curgpos += 5;
       clampGripper(curgpos, curtpos);
 
-      setGripper(curgpos);
+      StaticJsonDocument<200> doc;
+      doc["T"] = 1013;
+      doc["spd"] = 1000;
+      doc["acc"] = 0;
+      doc["OpenCloseVal"] = curgpos;
+
+      serializeJson(doc, Serial1);
+      Serial1.println();
+      delay(10);
     }
 
     // Right click → open
@@ -1409,7 +1417,15 @@ void mouse_control(int8_t dx, int8_t dy, int8_t scroll, uint8_t buttons) {
       curgpos -= 5;
       clampGripper(curgpos, curtpos);
 
-      setGripper(curgpos);
+      StaticJsonDocument<200> doc;
+      doc["T"] = 1013;
+      doc["spd"] = 1000;
+      doc["acc"] = 0;
+      doc["OpenCloseVal"] = curgpos;
+      
+      serializeJson(doc, Serial1);
+      Serial1.println();
+      delay(10);
     }
   }
 
