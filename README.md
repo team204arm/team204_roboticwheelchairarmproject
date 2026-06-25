@@ -26,6 +26,116 @@ The system supports both manual and automatic control. Users can move the arm di
 
 ---
 
+## Assembly and Installation
+
+For full assembly, installation, wiring, software setup, and troubleshooting instructions, please refer to the project assembly guide.
+
+**Assembly Guide:** Link coming soon
+
+The assembly guide should be used as the main reference for building and setting up the robotic arm system. This README is intended to provide a general project overview and explain the files included in this repository.
+
+---
+
+## Repository Contents
+
+| File or Folder              | Description                                                                                                                                                                                                                 |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Controller`                | Contains design files for the custom controller housing and related controller components. The controller includes the display, joystick, arcade buttons, power switch, and USB input used to operate the robotic arm.      |
+| `Drawings.zip`              | Contains technical drawings used for manufacturing, documentation, and reference. These drawings support replication of the custom parts used in the project.                                                               |
+| `Electrical Components`     | Contains files related to the electrical system, including components used for the controller, wiring, PCB integration, and power distribution.                                                                             |
+| `End-Effectors.zip`         | Contains CAD files for the interchangeable end-effectors used with the robotic arm. These include attachments for general object handling, service-animal interaction, umbrella holding, and future customization.          |
+| `Joystick_Control.ino`      | Arduino code for operating the robotic arm using the joystick-based controller. This supports manual control, menu interaction, and control of the arm and gripper.                                                         |
+| `Kit Material List.xlsx`    | Bill of materials for the project. This spreadsheet lists the parts, materials, and components needed to reproduce the robotic arm system.                                                                                  |
+| `Mounting Parts.zip`        | Contains CAD files for the custom wheelchair mounting structure. These parts allow the robotic arm, battery, controller support, and electronics to attach to the powered wheelchair.                                       |
+| `Mouse_Control.ino`         | Arduino code for controlling the robotic arm using a computer mouse as an alternative input method. This demonstrates the system’s ability to support multiple control devices.                                             |
+| `Quick Swap.zip`            | Contains CAD files for the quick-swap mechanism used to attach and remove end-effectors from the wrist of the robotic arm. This mechanism improves modularity and allows the user or caregiver to switch tools more easily. |
+| `RoArm-M2_With_Gripper.zip` | Contains the RoArm-M2-S project code and related files for operating the robotic arm with the modified gripper setup.                                                                                                       |
+| `README.md`                 | Provides an overview of the project, explains the repository contents, and directs users to the assembly guide for full setup instructions.                                                                                 |
+
+---
+
+## Basic Operation
+
+After the system has been assembled and the code has been uploaded, the robotic arm can be operated through the custom controller.
+
+The controller includes:
+
+* A display screen for menu navigation and user feedback
+* A joystick for manual movement and menu control
+* A freeze button to stop arm movement
+* A mode button to switch between control modes
+* A USB-A input for alternative control devices
+
+The arm supports both manual control and automatic functions. Manual control allows the user to directly move the arm and gripper. Automatic mode allows the user to select stored motions from the menu.
+
+---
+
+## Main Functions
+
+The robotic arm includes several built-in functions.
+
+### Manual Control
+
+Manual control allows the user to move the robotic arm directly using the joystick or an alternative control device.
+
+### Gripper Control
+
+Gripper control allows the user to control the wrist and gripper for object handling tasks.
+
+### Stow Function
+
+The stow function moves the arm into a safe travel position. This should be used before transporting the wheelchair or turning off the system.
+
+### Bring Cup Function
+
+The bring cup function helps move a cup toward the user. The function uses shared control, where the arm performs part of the motion and the user completes alignment.
+
+### Elevator Press Function
+
+The elevator press function assists the user with pressing elevator buttons. The arm extends forward, the user aligns the end-effector, and the arm returns to a stowed position after the button press.
+
+### Custom Functions
+
+The system allows users to record, store, rename, and replay up to three custom functions. These can be used for repeated tasks chosen by the user.
+
+---
+
+## End-Effectors
+
+The system includes interchangeable end-effectors that attach to the wrist of the robotic arm using a quick-swap mechanism.
+
+### Off-the-Shelf Gripper
+
+The gripper is used for general object handling tasks such as lifting small objects, pressing buttons, holding cups, and interacting with lightweight items.
+
+### Bin-and-Brush Attachment
+
+The bin-and-brush attachment was designed for service animal interaction. It can assist with ball placement and brushing.
+
+### Umbrella Holder
+
+The umbrella holder secures an umbrella handle so the user can remain protected from rain without manually holding the umbrella.
+
+### Blank End-Effector
+
+A blank end-effector template is included so future users or teams can design additional attachments while staying compatible with the quick-swap system.
+
+---
+
+## Notes for Future Development
+
+Future teams and contributors can build on this project by:
+
+* Improving weather resistance
+* Adding new end-effectors
+* Expanding control options
+* Improving software usability
+* Adding more pre-programmed functions
+* Refining the mounting system for different wheelchair models
+* Improving long-term maintenance and user support documentation
+
+---
+
 ## Project Purpose
 
 This repository is intended to make the wheelchair robotic arm project easier to reproduce, modify, and improve.
