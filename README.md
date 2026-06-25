@@ -30,9 +30,7 @@ The system supports both manual and automatic control. Users can move the arm di
 
 For full assembly, installation, wiring, software setup, and troubleshooting instructions, please refer to the project assembly guide.
 
-**Assembly Guide:** Link coming soon
-
-The assembly guide should be used as the main reference for building and setting up the robotic arm system. This README is intended to provide a general project overview and explain the files currently included in this repository.
+Arm Assembly Guide.pdf
 
 ---
 
