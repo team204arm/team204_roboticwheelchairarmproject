@@ -32,25 +32,31 @@ For full assembly, installation, wiring, software setup, and troubleshooting ins
 
 **Assembly Guide:** Link coming soon
 
-The assembly guide should be used as the main reference for building and setting up the robotic arm system. This README is intended to provide a general project overview and explain the files included in this repository.
+The assembly guide should be used as the main reference for building and setting up the robotic arm system. This README is intended to provide a general project overview and explain the files currently included in this repository.
+
+---
+
+## CAD Files
+
+All CAD files for the project are stored in the Google Drive folder linked below:
+
+[Team 204 CAD Files Google Drive Folder](https://drive.google.com/drive/folders/1xANLljKQt4pyda8Gyb92bH3nKtEWIrun?usp=drive_link)
+
+The CAD folder includes the design files for the custom mechanical components used in the wheelchair robotic arm system, including mounting parts, controller components, quick-swap parts, and end-effector designs.
 
 ---
 
 ## Repository Contents
 
-| File or Folder              | Description                                                                                                                                                                                                                 |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Controller`                | Contains design files for the custom controller housing and related controller components. The controller includes the display, joystick, arcade buttons, power switch, and USB input used to operate the robotic arm.      |
-| `Drawings.zip`              | Contains technical drawings used for manufacturing, documentation, and reference. These drawings support replication of the custom parts used in the project.                                                               |
-| `Electrical Components`     | Contains files related to the electrical system, including components used for the controller, wiring, PCB integration, and power distribution.                                                                             |
-| `End-Effectors.zip`         | Contains CAD files for the interchangeable end-effectors used with the robotic arm. These include attachments for general object handling, service-animal interaction, umbrella holding, and future customization.          |
-| `Joystick_Control.ino`      | Arduino code for operating the robotic arm using the joystick-based controller. This supports manual control, menu interaction, and control of the arm and gripper.                                                         |
-| `Kit Material List.xlsx`    | Bill of materials for the project. This spreadsheet lists the parts, materials, and components needed to reproduce the robotic arm system.                                                                                  |
-| `Mounting Parts.zip`        | Contains CAD files for the custom wheelchair mounting structure. These parts allow the robotic arm, battery, controller support, and electronics to attach to the powered wheelchair.                                       |
-| `Mouse_Control.ino`         | Arduino code for controlling the robotic arm using a computer mouse as an alternative input method. This demonstrates the system’s ability to support multiple control devices.                                             |
-| `Quick Swap.zip`            | Contains CAD files for the quick-swap mechanism used to attach and remove end-effectors from the wrist of the robotic arm. This mechanism improves modularity and allows the user or caregiver to switch tools more easily. |
-| `RoArm-M2_With_Gripper.zip` | Contains the RoArm-M2-S project code and related files for operating the robotic arm with the modified gripper setup.                                                                                                       |
-| `README.md`                 | Provides an overview of the project, explains the repository contents, and directs users to the assembly guide for full setup instructions.                                                                                 |
+The repository currently contains the main software files, material list, and project documentation.
+
+| File                        | Description                                                                                                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Joystick_Control.ino`      | Arduino code for operating the robotic arm using the joystick-based controller. This supports manual control, menu interaction, and control of the arm and gripper.             |
+| `Mouse_Control.ino`         | Arduino code for controlling the robotic arm using a computer mouse as an alternative input method. This demonstrates the system’s ability to support multiple control devices. |
+| `RoArm-M2_With_Gripper.zip` | Project code and related files for operating the Waveshare RoArm M2-S with the modified gripper setup. This file is used when uploading code to the RoArm-M2-S.                 |
+| `Kit Material List.xlsx`    | Bill of materials for the project. This spreadsheet lists the parts, materials, and components needed to reproduce the robotic arm system.                                      |
+| `README.md`                 | Provides an overview of the project, explains the current repository contents, and directs users to the assembly guide and CAD file folder.                                     |
 
 ---
 
@@ -102,7 +108,7 @@ The system allows users to record, store, rename, and replay up to three custom 
 
 ## End-Effectors
 
-The system includes interchangeable end-effectors that attach to the wrist of the robotic arm using a quick-swap mechanism.
+The system includes interchangeable end-effectors that attach to the wrist of the robotic arm using a quick-swap mechanism. The CAD files for these end-effectors are included in the linked Google Drive CAD folder.
 
 ### Off-the-Shelf Gripper
 
